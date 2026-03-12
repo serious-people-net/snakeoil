@@ -15,7 +15,7 @@ const base = import.meta.env.BASE_URL.endsWith("/")
 	>
 		<!-- Paper texture overlay -->
 		<div
-			class="fixed inset-0 pointer-events-none z-0 opacity-30 mix-blend-multiply bg-repeat"
+			class="absolute inset-0 pointer-events-none z-0 opacity-30 mix-blend-multiply bg-repeat"
 			style={`background-image: url('${base}paper.png')`}
 		>
 		</div>
@@ -24,22 +24,16 @@ const base = import.meta.env.BASE_URL.endsWith("/")
 			class="relative z-10 w-full max-w-3xl mx-auto flex flex-col items-center text-center"
 		>
 			<!-- Headline -->
-			<h1
-				class="text font-headline text-[2.6rem] leading-[0.8] sm:text-7xl md:text-8xl lg:text-[6.5rem] mb-10 sm:mb-14 md:mb-16 w-full"
-			>
-				<span
-					class="block underline decoration-2 border-ink pb-2 sm:pb-3 mb-1"
-					>What else is your</span
-				>
-				<span
-					class="block underline decoration-2 border-b-[2px] border-ink pb-2 sm:pb-3"
-					>ad agency selling?</span
-				>
-			</h1>
+					<h1
+						class="font-headline text-[2.6rem] leading-[0.8] sm:text-7xl md:text-8xl lg:text-[6.5rem] w-full mb-10 sm:mb-14 md:mb-16"
+					>
+						<span class="block underline decoration-2 decoration-ink pb-2 sm:pb-3 mb-1">What else is your</span>
+						<span class="block underline decoration-2 decoration-ink pb-2 sm:pb-3">ad agency selling?</span>
+					</h1>
 
-			<!-- Snake Oil Salesman Image — with double border, no padding -->
+				<!-- Snake Oil Salesman Image — with double border, no padding -->
 			<div
-				class="mb-10 sm:mb-14 md:mb-16 w-full max-w-lg mx-auto border border-ink/30 outline outline-[3px] outline-ink/60 -outline-offset-[6px]"
+				class="mb-10 sm:mb-14 md:mb-16 w-full max-w-lg mx-auto border border-ink outline outline-[3px] outline-ink -outline-offset-[6px]"
 			>
 				<Image
 					src={snakeoilImg}
@@ -48,9 +42,6 @@ const base = import.meta.env.BASE_URL.endsWith("/")
 					widths={[500, 800, 1000]}
 				/>
 			</div>
-
-			<!-- Divider -->
-			<div class="w-16 border-t border-ink/30 mb-8 sm:mb-10"></div>
 
 			<!-- Body Copy -->
 			<div
