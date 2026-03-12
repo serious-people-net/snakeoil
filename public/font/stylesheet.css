@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Verve';
+    src: url('Verve.woff2') format('woff2'),
+        url('Verve.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
