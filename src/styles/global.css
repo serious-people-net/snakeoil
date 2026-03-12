@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-headline: var(--font-verve);
+  --font-body: var(--font-libre-baskerville);
+}
+
+@theme {
+  --color-ink: #00212B;
+  --color-paper: #f5f0e8;
+}

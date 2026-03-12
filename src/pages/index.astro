@@ -1,11 +1,102 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import snakeoilImg from "../assets/snakeoil.png";
+import snakeImg from "../assets/snake.png";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const base = import.meta.env.BASE_URL.endsWith("/")
+	? import.meta.env.BASE_URL
+	: import.meta.env.BASE_URL + "/";
 ---
 
 <Layout>
-	<Welcome />
+	<main
+		class="min-h-screen flex flex-col items-center justify-center px-4 py-12 md:py-20 relative"
+	>
+		<!-- Paper texture overlay -->
+		<div
+			class="fixed inset-0 pointer-events-none z-0 opacity-30 mix-blend-multiply bg-repeat"
+			style={`background-image: url('${base}paper.png')`}
+		>
+		</div>
+
+		<div class="relative z-10 w-full max-w-2xl mx-auto">
+			<!-- Outer border -->
+			<div class="border border-ink/40 p-1.5 sm:p-2">
+				<!-- Inner border -->
+				<div
+					class="border-3 border-ink/70 px-6 py-10 sm:px-10 sm:py-14 md:px-14 md:py-16 flex flex-col items-center text-center"
+				>
+					<!-- Headline -->
+					<h1
+						class="font-headline text-4xl sm:text-5xl md:text-6xl leading-[1.05] tracking-tight mb-8 sm:mb-12"
+					>
+						What else is your<br />ad agency selling?
+					</h1>
+
+					<!-- Snake Oil Salesman Image -->
+					<div class="mb-8 sm:mb-12 w-full max-w-sm mx-auto">
+						<Image
+							src={snakeoilImg}
+							alt="A snake oil salesman holding a bottle of Snake Oil & Gas"
+							class="w-full h-auto"
+							widths={[400, 600]}
+						/>
+					</div>
+
+					<!-- Body Copy -->
+					<div
+						class="font-body text-base sm:text-lg leading-relaxed max-w-lg mx-auto mb-8 sm:mb-10 space-y-4"
+					>
+						<p>
+							Some of the agencies working in healthcare also work
+							for fossil fuel companies&nbsp;&mdash; whose
+							pollution does wonders for cancer, asthma and
+							everything in between.
+						</p>
+						<p>
+							118 global health organisations have already signed
+							the Fossil-Free Health Communications commitment.
+						</p>
+					</div>
+
+					<!-- CTA Button -->
+					<a
+						href="https://climateandhealthalliance.org/what-we-do/mobilise-the-movement/break-the-fossil-influence-campaign/"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="inline-block font-body text-sm sm:text-base border-2 border-ink/70 px-6 py-3 sm:px-8 sm:py-3.5 hover:bg-ink hover:text-paper transition-colors duration-200 mb-10 sm:mb-14"
+					>
+						Take the commitment
+					</a>
+
+					<!-- Snake Icon in Dark Circle -->
+					<div
+						class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-ink/70 flex items-center justify-center p-4 sm:p-5"
+					>
+						<Image
+							src={snakeImg}
+							alt="Snake icon"
+							class="w-full h-auto"
+							width={80}
+							height={80}
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer
+			class="relative z-10 mt-8 sm:mt-12 text-center font-body text-sm text-ink/60"
+		>
+			Made by <a
+				href="https://seriouspeople.co"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="underline hover:text-ink transition-colors duration-200"
+				>Serious People</a
+			>
+		</footer>
+	</main>
 </Layout>
