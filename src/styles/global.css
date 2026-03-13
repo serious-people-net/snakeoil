@@ -9,3 +9,49 @@
   --color-ink: #1c1814;
   --color-paper: #f5f0e8;
 }
+
+body {
+  color: rgb(28 24 20 / 0.88);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fade-in 0.7s ease-out both;
+}
+
+.fade-delay-1 { animation-delay: 0.1s; }
+.fade-delay-2 { animation-delay: 0.3s; }
+.fade-delay-3 { animation-delay: 0.5s; }
+.fade-delay-4 { animation-delay: 0.65s; }
+.fade-delay-5 { animation-delay: 0.8s; }
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+.spin-slow {
+  animation: spin-slow 18s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    animation: none;
+    opacity: 1;
+  }
+  .spin-slow {
+    animation: none;
+  }
+  .hover\:-translate-y-1:hover {
+    transform: none;
+  }
+}
