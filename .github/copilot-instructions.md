@@ -11,7 +11,7 @@ A satirical one-page website styled as a vintage "Snake Oil" advertisement. It h
 - **Framework**: Astro (static site)
 - **CSS**: Tailwind CSS 4 (uses `@theme` directive, NOT Tailwind 3 `tailwind.config.js`)
 - **Fonts**: Verve (local, headlines), Libre Baskerville (Google Fonts, body)
-- **Deployment**: GitHub Pages via GitHub Actions at `olifro.st/snakeoil`
+- **Deployment**: GitHub Pages via GitHub Actions at `seriouspeople.co/snakeoil`
 
 ## Design
 - Vintage / old-fashioned print ad aesthetic
