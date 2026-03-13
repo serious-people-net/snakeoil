@@ -4,9 +4,6 @@ applyTo: "**"
 
 # Snake Oil & Gas - Project Instructions
 
-## Project Overview
-A satirical one-page website styled as a vintage "Snake Oil" advertisement. It highlights how some ad agencies working in healthcare also work for fossil fuel companies.
-
 ## Tech Stack
 - **Framework**: Astro (static site)
 - **CSS**: Tailwind CSS 4 (uses `@theme` directive, NOT Tailwind 3 `tailwind.config.js`)
